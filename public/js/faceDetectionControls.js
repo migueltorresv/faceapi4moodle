@@ -88,7 +88,8 @@ async function changeFaceDetector(detector) {
 
   $('#loader').show()
   if (!isFaceDetectionModelLoaded()) {
-    await getCurrentFaceDetectionNet().load('/')
+    await getCurrentFaceDetectionNet().load('https://migueltorresv.github.io/faceapi4moodle/models')
+    //await getCurrentFaceDetectionNet().load('./models')
   }
 
   $(`#${detector}_controls`).show()
